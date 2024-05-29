@@ -1,0 +1,58 @@
+﻿<Window x:Class="Wpf_Dolgozat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Paper" Height="450" Width="800">
+    <Grid>
+        <!-- Define columns for sidebar and main content area -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <StackPanel Background="#2E2A3B" Width="200">
+            <TextBlock Text="School Paper" FontSize="20" Foreground="White" Margin="10" />
+            <Button Content="Task 1" Name="Task1Button" Margin="10" />
+            <Button Content="Task 2" Name="Task2Button" Margin="10" />
+            <Button Content="Task 3" Name="Task3Button" Margin="10" Click="Task3Button_Click"/>
+            <Button Content="Close" Name="CloseButton" Margin="10" Click="CloseButton_Click"/>
+        </StackPanel>
+
+        <!-- Main Content Area -->
+        <Grid Grid.Column="1" Background="#E8F0F8">
+            <Grid Margin="50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Registration Form Title -->
+                <TextBlock Text="Registration Form" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                <!-- Form Fields -->
+                <StackPanel Grid.Row="1">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="First Name:" Width="100"/>
+                        <TextBox Width="200" Name="FirstNameTextBox"/>
+                        <TextBox Width="200" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Email:" Width="100"/>
+                        <TextBox Width="200" Name="EmailTextBox"/>
+                        <TextBox Width="200" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Address:" Width="100"/>
+                        <TextBox Width="400" Height="100" Name="AddressTextBox"/>
+                    </StackPanel>
+                    <CheckBox Content="I accept the terms and conditions" Margin="0,0,0,10"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Submit" Width="100" Margin="10"/>
+                        <Button Content="Cancel" Width="100" Margin="10"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+
